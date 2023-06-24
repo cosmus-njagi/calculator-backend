@@ -10,9 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.security.core.userdetails.UserDetails;
 
 /**
@@ -20,7 +18,9 @@ import org.springframework.security.core.userdetails.UserDetails;
  * @Date 24/06/2023
  */
 @RestController
-public class AuthController {
+@CrossOrigin
+@RequestMapping("/api")
+public class ApiController {
 
     @Autowired
     private AuthenticationManager authenticationManager;
