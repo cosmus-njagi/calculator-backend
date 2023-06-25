@@ -11,10 +11,24 @@ public class Response {
 
     private Error error;
 
+    private String returnCode;
+
+    public String getReturnCode() {
+        return returnCode;
+    }
+
+    public void setReturnCode(String returnCode) {
+        this.returnCode = returnCode;
+    }
+
     public Response(int code, String message, Error error) {
         this.code = code;
         this.message = message;
         this.error = error;
+    }
+
+    public Response() {
+
     }
 
     public int getCode() {
