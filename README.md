@@ -1,6 +1,6 @@
 # calculator-backend 
 
-Prerequisites <br>
+# Prerequisites <br>
 Before you begin, make sure you have the following installed on your machine:
 
 Java Development Kit (JDK) 11 or later
