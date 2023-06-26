@@ -12,25 +12,25 @@ Before you begin, make sure you have the following installed on your machine:
 
 # Steps
 
-Follow these steps to set up your environment:
+- Follow these steps to set up your environment:
 
-Install Java Development Kit (JDK) 11 or later:
+- Install Java Development Kit (JDK) 11 or later:
 
-Visit the Oracle website or adoptopenjdk.net to download the JDK distribution for your operating system.
+- Visit the Oracle website or adoptopenjdk.net to download the JDK distribution for your operating system.
 
-Follow the installation instructions provided by the JDK distribution.
+- Follow the installation instructions provided by the JDK distribution.
 
-Verify Java installation:
+- Verify Java installation:
 
-Open a terminal or command prompt.
+- Open a terminal or command prompt.
 
-Run the following command to check the installed Java version:
+- Run the following command to check the installed Java version:
 
-java -version
+- java -version
 
-Ensure that the output shows the correct version of Java.
+- Ensure that the output shows the correct version of Java.
 
-Install Apache Maven (if not already installed):
+- Install Apache Maven (if not already installed):
 
 Visit the Apache Maven website (maven.apache.org) to download the latest stable release.
 Follow the installation instructions provided by Apache Maven.
@@ -38,9 +38,9 @@ Follow the installation instructions provided by Apache Maven.
 
 # Verify Maven installation:
 
-Open a terminal or command prompt.
+- Open a terminal or command prompt.
 
-Run the following command to check the installed Maven version:
+- Run the following command to check the installed Maven version:
 
 mvn -v
 
