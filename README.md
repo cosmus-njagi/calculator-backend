@@ -66,3 +66,5 @@ Generate the project and import it into your IDE.
 
 Build and run the Spring Boot application:
 
+Access the application by visiting http://localhost:8095 in your web browser
+
