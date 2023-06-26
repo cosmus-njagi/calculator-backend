@@ -56,7 +56,7 @@ Ensure that the output shows the correct version of Maven.
 
 - For Eclipse: Go to "Window" -> "Preferences" -> "Java" -> "Installed JREs" and add the installed JDK.
 
-# Open a new Spring Boot project:
+# Import project:
 
 - To import a cloned project into an IDE, follow these general steps:
 - Open your preferred IDE (e.g., IntelliJ IDEA, Eclipse).
