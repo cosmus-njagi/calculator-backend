@@ -56,15 +56,11 @@ Ensure that the output shows the correct version of Maven.
 
 - For Eclipse: Go to "Window" -> "Preferences" -> "Java" -> "Installed JREs" and add the installed JDK.
 
-# Create a new Spring Boot project:
+# Open a new Spring Boot project:
 
-- Use the Spring Initializr (start.spring.io) or your IDE's Spring Boot project creation wizard to create a new Spring Boot project.
-
-- Select the desired project dependencies and options.
-
-- Generate the project and import it into your IDE.
-
-- Build and run the Spring Boot application:
-
-Access the application by visiting http://localhost:8095 in your web browser
+- To import a cloned project into an IDE, follow these general steps:
+- Open your preferred IDE (e.g., IntelliJ IDEA, Eclipse).
+- Choose the option to import an existing project.
+- Select the root directory of your cloned project.
+- Follow the IDE's prompts and provide any additional information required during the import process. This may include selecting the JDK, configuring project settings, or resolving dependencies.
 
