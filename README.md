@@ -48,23 +48,23 @@ Ensure that the output shows the correct version of Maven.
 
 # Set up your IDE:
 
-Install your preferred IDE (e.g., IntelliJ IDEA, Eclipse).
+- Install your preferred IDE (e.g., IntelliJ IDEA, Eclipse).
 
-Open the IDE and configure the JDK:
+- Open the IDE and configure the JDK:
 
-For IntelliJ IDEA: Go to "File" -> "Project Structure" -> "Project Settings" -> "Project" -> "Project SDK" and select the installed JDK.
+- For IntelliJ IDEA: Go to "File" -> "Project Structure" -> "Project Settings" -> "Project" -> "Project SDK" and select the installed JDK.
 
-For Eclipse: Go to "Window" -> "Preferences" -> "Java" -> "Installed JREs" and add the installed JDK.
+- For Eclipse: Go to "Window" -> "Preferences" -> "Java" -> "Installed JREs" and add the installed JDK.
 
 # Create a new Spring Boot project:
 
-Use the Spring Initializr (start.spring.io) or your IDE's Spring Boot project creation wizard to create a new Spring Boot project.
+- Use the Spring Initializr (start.spring.io) or your IDE's Spring Boot project creation wizard to create a new Spring Boot project.
 
-Select the desired project dependencies and options.
+- Select the desired project dependencies and options.
 
-Generate the project and import it into your IDE.
+- Generate the project and import it into your IDE.
 
-Build and run the Spring Boot application:
+- Build and run the Spring Boot application:
 
 Access the application by visiting http://localhost:8095 in your web browser
 
