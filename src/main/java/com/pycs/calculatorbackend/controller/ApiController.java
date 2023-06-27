@@ -2,6 +2,7 @@ package com.pycs.calculatorbackend.controller;
 
 import com.pycs.calculatorbackend.configuration.JwtTokenUtil;
 import com.pycs.calculatorbackend.model.*;
+import com.pycs.calculatorbackend.service.MailServiceImpl;
 import com.pycs.calculatorbackend.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.multipart.MultipartFile;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +36,9 @@ public class ApiController {
 
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
+
+    @Autowired
+    MailServiceImpl mailService;
 
     private Response apiResponse = new Response();
 
@@ -185,5 +190,25 @@ public class ApiController {
         return loanAmount - processingFees - exciseDuty - legalFees;
     }
 
+    // sending email
+    @PostMapping(  "/sendEmail")
+    public ResponseEntity<?> sendCalculatorEmail (@ModelAttribute MailBody mailbody) {
+        String to = mailbody.getTo();
+        String subject = mailbody.getSubject();
+        String text = mailbody.getText();
+        MultipartFile attachment = mailbody.getAttachment();
+        System.out.println("to address "+to);
+        try {
+            this.mailService.sendMail(to, subject, text, attachment);
+            apiResponse.setReturnCode("00");
+            apiResponse.setMessage("Email sent successfully");
+            return new ResponseEntity<>(apiResponse, HttpStatus.OK);
+        } catch (Exception e){
+            e.printStackTrace();
+            apiResponse.setReturnCode("01");
+            apiResponse.setMessage("oops! internal error occurred");
+            return new ResponseEntity<>(apiResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }
 

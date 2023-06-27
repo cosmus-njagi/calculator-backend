@@ -44,7 +44,7 @@ public class JwtRequestFilter extends OncePerRequestFilter implements Filter {
                 try {
                     username = jwtTokenUtil.getUsernameFromToken(token);
                 } catch (Exception e) {
-                    System.out.println("JWT Token has expired" + e);
+                    System.out.println("JWT Token has expired " + e);
                     SecurityConfig.sendError(response, e, HttpServletResponse.SC_FORBIDDEN, "Not authorized resources");
                     return; // Return immediately to bypass further processing for this request
                 }
